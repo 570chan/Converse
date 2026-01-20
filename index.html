@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Discord Server</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root{
   --pink:#ff5fa2;
-  --purple:#7b4fe9;
-  --dark:#1e1033;
-  --soft:#f6ecff;
+  --purple:#8b5cf6;
+  --glass:rgba(255,255,255,.25);
 }
 
 *{
@@ -25,150 +25,146 @@
 body{
   background:#fff;
   color:#333;
-  overflow-x:hidden;
 }
 
 /* ===== HERO ===== */
 .hero{
   min-height:100vh;
   background:
-    linear-gradient(180deg,rgba(255,180,220,.35),rgba(150,120,255,.4)),
-    linear-gradient(120deg,#ffd1e8,#bfa8ff,#ffb3d9);
-  position:relative;
-  padding:90px 6%;
+    linear-gradient(rgba(255,150,200,.45),rgba(140,120,255,.45)),
+    url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600");
+  background-size:cover;
+  background-position:center;
+  padding:90px 7%;
   display:flex;
   align-items:center;
+  position:relative;
+  color:#fff;
 }
 
 .hero-content{
   max-width:520px;
-  color:#fff;
 }
 
-.hero-avatar{
-  width:60px;
-  height:60px;
+.server-icon{
+  width:90px;
+  height:90px;
   border-radius:50%;
-  background:linear-gradient(135deg,#fff,#ffd1f0);
-  margin-bottom:20px;
+  background:url("https://i.imgur.com/7k12EPD.png");
+  background-size:cover;
+  border:4px solid rgba(255,255,255,.7);
+  box-shadow:0 0 30px rgba(255,95,162,.7);
+  margin-bottom:25px;
 }
 
 .hero h1{
   font-size:42px;
   font-weight:700;
-  line-height:1.2;
 }
 
 .hero p{
-  margin:15px 0 25px;
-  opacity:.95;
+  margin:18px 0 26px;
 }
 
 .hero button{
   background:var(--pink);
   border:none;
-  padding:14px 26px;
+  padding:14px 28px;
   border-radius:30px;
   color:#fff;
   font-size:15px;
   cursor:pointer;
-  box-shadow:0 10px 30px rgba(255,95,162,.5);
-  transition:.3s;
+  box-shadow:0 12px 30px rgba(255,95,162,.6);
 }
 
-.hero button:hover{
-  transform:translateY(-2px);
-}
-
-/* STAT CARD */
+/* ===== STATS ===== */
 .stats{
   position:absolute;
-  right:6%;
-  top:40%;
-  background:rgba(255,255,255,.25);
-  backdrop-filter:blur(10px);
-  padding:20px;
-  border-radius:16px;
-  color:#fff;
-  width:220px;
+  right:7%;
+  top:35%;
+  width:240px;
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  padding:22px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
-
-.stat-dots{
-  display:flex;
-  gap:6px;
-  margin-bottom:10px;
-}
-
-.dot{
-  width:14px;
-  height:14px;
-  border-radius:50%;
-}
-
-.dot:nth-child(1){background:#ff7eb3}
-.dot:nth-child(2){background:#9d7bff}
-.dot:nth-child(3){background:#7bdfff}
 
 .stats ul{
   list-style:none;
-  font-size:13px;
 }
 
 .stats li{
-  margin:6px 0;
+  margin:10px 0;
+  display:flex;
+  gap:10px;
+  font-size:14px;
+}
+
+.stats i{
+  color:#ffd1ec;
 }
 
 /* ===== ABOUT ===== */
 .about{
+  padding:90px 7%;
   background:#fff5fb;
-  padding:90px 8%;
-}
-
-.about span{
-  background:#ffd6ec;
-  color:#c3005e;
-  padding:6px 14px;
-  border-radius:20px;
-  font-size:13px;
 }
 
 .about h2{
-  font-size:40px;
-  margin:20px 0;
-  color:#5a2ca0;
+  font-size:38px;
+  color:#5b21b6;
+  margin-bottom:40px;
 }
 
-.about p{
-  max-width:900px;
-  line-height:1.8;
-  color:#555;
-}
-
-.about strong{
-  color:var(--pink);
-}
-
-.metrics{
+.about-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
-  margin-top:50px;
+}
+
+.about-card{
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.about-card i{
+  font-size:28px;
+  color:var(--pink);
+  margin-bottom:15px;
+}
+
+.about-card h3{
+  margin-bottom:10px;
+}
+
+/* ===== METRICS ===== */
+.metrics{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:30px;
   text-align:center;
+}
+
+.metric{
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
 }
 
 .metric h3{
   color:var(--purple);
-  font-size:28px;
-}
-
-.metric span{
-  font-size:13px;
-  color:#777;
 }
 
 /* ===== CTA ===== */
 .cta{
-  padding:90px 8%;
+  padding:90px 7%;
   text-align:center;
 }
 
@@ -182,15 +178,13 @@ body{
 }
 
 .cta button{
-  margin-top:25px;
+  margin-top:30px;
   background:#000;
   color:#fff;
-  padding:16px 32px;
+  padding:16px 34px;
   border-radius:30px;
   border:none;
-  font-size:15px;
-  cursor:pointer;
-  box-shadow:0 15px 35px rgba(255,95,162,.35);
+  box-shadow:0 15px 35px rgba(255,95,162,.4);
 }
 
 .socials{
@@ -200,23 +194,22 @@ body{
   gap:16px;
 }
 
-.social{
-  width:42px;
-  height:42px;
+.socials i{
+  width:44px;
+  height:44px;
   border-radius:50%;
+  background:linear-gradient(135deg,#ff7eb3,#7b8dff);
+  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:linear-gradient(135deg,#ff7eb3,#7b8dff);
-  color:#fff;
-  font-weight:600;
 }
 
 /* ===== FOOTER ===== */
 footer{
   background:linear-gradient(135deg,#2a0b4f,#4a197d);
-  color:#eee;
-  padding:70px 8% 30px;
+  color:#fff;
+  padding:70px 7% 30px;
 }
 
 .footer-grid{
@@ -225,27 +218,12 @@ footer{
   gap:40px;
 }
 
-footer h3{
-  margin-bottom:12px;
-}
-
-footer p, footer a{
-  font-size:14px;
-  opacity:.9;
-}
-
-footer a{
-  display:block;
-  margin:6px 0;
-  text-decoration:none;
-  color:#fff;
-}
-
 .footer-img{
-  width:100%;
   height:160px;
-  border-radius:12px;
-  background:linear-gradient(120deg,#ffd1e8,#d5b3ff);
+  border-radius:14px;
+  background:url("https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800");
+  background-size:cover;
+  box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
 .footer-bottom{
@@ -255,7 +233,6 @@ footer a{
   display:flex;
   justify-content:space-between;
   font-size:13px;
-  opacity:.8;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -272,100 +249,90 @@ footer a{
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-avatar"></div>
+    <div class="server-icon"></div>
     <h1>Chào Mừng Đến Với<br>Máy Chủ Discord<br>Của Chúng Tôi</h1>
-    <p>Nơi kết nối cộng đồng, chia sẻ đam mê và tạo nên những kỷ niệm đáng nhớ cùng nhau</p>
-    <button>🎮 Tham Gia Server</button>
+    <p>Nơi kết nối cộng đồng, chia sẻ đam mê và tạo nên những kỷ niệm đáng nhớ</p>
+    <button><i class="fab fa-discord"></i> Tham Gia Server</button>
   </div>
 
   <div class="stats">
-    <div class="stat-dots">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
     <ul>
-      <li>2,500+ thành viên hoạt động</li>
-      <li>500+ online mỗi ngày</li>
-      <li>50+ kênh chat đa dạng</li>
-      <li>Sự kiện hàng tuần</li>
+      <li><i class="fa-solid fa-users"></i> 2,500+ thành viên</li>
+      <li><i class="fa-solid fa-signal"></i> 500+ online/ngày</li>
+      <li><i class="fa-solid fa-comments"></i> 50+ kênh chat</li>
+      <li><i class="fa-solid fa-calendar"></i> Sự kiện hàng tuần</li>
     </ul>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about">
-  <span>VỀ SERVER</span>
-  <h2>Khám Phá Cộng Đồng<br>Của Chúng Tôi</h2>
-  <p>
-    Chào mừng bạn đến với một trong những <strong>cộng đồng Discord</strong> sôi động và thân thiện nhất!
-    Đây không chỉ là nơi trò chuyện mà còn là <strong>một gia đình</strong> – nơi mọi người cùng chia sẻ
-    niềm vui, học hỏi và sáng tạo.
-  </p>
+  <h2>Khám Phá Cộng Đồng</h2>
+
+  <div class="about-grid">
+    <div class="about-card">
+      <i class="fa-solid fa-heart"></i>
+      <h3>Thân Thiện</h3>
+      <p>Cộng đồng tích cực, hỗ trợ và chào đón thành viên mới.</p>
+    </div>
+
+    <div class="about-card">
+      <i class="fa-solid fa-gamepad"></i>
+      <h3>Giải Trí</h3>
+      <p>Game, anime, minigame và hoạt động mỗi ngày.</p>
+    </div>
+
+    <div class="about-card">
+      <i class="fa-solid fa-palette"></i>
+      <h3>Sáng Tạo</h3>
+      <p>Chia sẻ artwork, âm nhạc và nội dung sáng tạo.</p>
+    </div>
+  </div>
 
   <div class="metrics">
-    <div class="metric">
-      <h3>2,500+</h3>
-      <span>Thành viên</span>
-    </div>
-    <div class="metric">
-      <h3>50+</h3>
-      <span>Kênh chat</span>
-    </div>
-    <div class="metric">
-      <h3>24/7</h3>
-      <span>Hoạt động</span>
-    </div>
-    <div class="metric">
-      <h3>100+</h3>
-      <span>Sự kiện/năm</span>
-    </div>
+    <div class="metric"><h3>2,500+</h3><span>Thành viên</span></div>
+    <div class="metric"><h3>50+</h3><span>Kênh</span></div>
+    <div class="metric"><h3>24/7</h3><span>Hoạt động</span></div>
+    <div class="metric"><h3>100+</h3><span>Sự kiện</span></div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
-  <h2>Bạn đã sẵn sàng để <em>tham gia ngay</em><br>vào cộng đồng?</h2>
+  <h2>Bạn đã sẵn sàng <em>tham gia ngay</em>?</h2>
   <button>Tham Gia Discord →</button>
 
   <div class="socials">
-    <div class="social">f</div>
-    <div class="social">D</div>
-    <div class="social">X</div>
-    <div class="social">IG</div>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-discord"></i>
+    <i class="fab fa-x-twitter"></i>
+    <i class="fab fa-instagram"></i>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div>
       <h3>Discord Server</h3>
-      <p>Cộng đồng sôi động với hơn 2,500 thành viên đam mê game, anime và sáng tạo nội dung.</p>
+      <p>Cộng đồng sôi động với hơn 2,500 thành viên.</p>
     </div>
 
     <div>
-      <h3>Liên Kết Nhanh</h3>
-      <a href="#">Trang Chủ</a>
-      <a href="#">Về Chúng Tôi</a>
-      <a href="#">Quy Tắc</a>
-      <a href="#">Sự Kiện</a>
-      <a href="#">Liên Hệ</a>
+      <h3>Liên Kết</h3>
+      <a href="#">Trang chủ</a>
+      <a href="#">Quy tắc</a>
+      <a href="#">Sự kiện</a>
     </div>
 
     <div>
       <h3>Server Nổi Bật</h3>
       <div class="footer-img"></div>
-      <p>Server của tháng</p>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <span>© 2024 Discord Server. All rights reserved.</span>
-    <span>Privacy · Terms · Cookies · Website Builder</span>
+    <span>© 2024 Discord Server</span>
+    <span>Privacy · Terms · Cookies</span>
   </div>
 </footer>
 
