@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Discord Server</title>
+<title>Lơ ngơ | social ❀ anime ❀ Converse</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -42,7 +42,6 @@ body{
   color:#fff;
 }
 
-
 .hero-content{
   max-width:520px;
 }
@@ -51,8 +50,7 @@ body{
   width:90px;
   height:90px;
   border-radius:50%;
-  background:url("https://i.imgur.com/7k12EPD.png");
-  background-size:cover;
+  background:url("https://i.imgur.com/7k12EPD.png") center/cover;
   border:4px solid rgba(255,255,255,.7);
   box-shadow:0 0 30px rgba(255,95,162,.7);
   margin-bottom:25px;
@@ -67,24 +65,26 @@ body{
   margin:18px 0 26px;
 }
 
-.hero button{
+.join-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
   background:var(--pink);
-  border:none;
   padding:14px 28px;
   border-radius:30px;
   color:#fff;
+  text-decoration:none;
   font-size:15px;
-  cursor:pointer;
   box-shadow:0 12px 30px rgba(255,95,162,.6);
 }
 
-/* ===== STATS ===== */
+/* ===== STATS (FIXED) ===== */
 .stats{
   position:absolute;
-  right:70%;
-  top:30%;
+  right:7%;
+  top:50%;
+  transform:translateY(-50%);
   width:300px;
-  min-height:260px;
   background:var(--glass);
   backdrop-filter:blur(12px);
   padding:22px;
@@ -179,13 +179,14 @@ body{
   font-style:normal;
 }
 
-.cta button{
+.cta-btn{
+  display:inline-block;
   margin-top:30px;
   background:#000;
   color:#fff;
   padding:16px 34px;
   border-radius:30px;
-  border:none;
+  text-decoration:none;
   box-shadow:0 15px 35px rgba(255,95,162,.4);
 }
 
@@ -196,7 +197,7 @@ body{
   gap:16px;
 }
 
-.socials i{
+.socials a{
   width:44px;
   height:44px;
   border-radius:50%;
@@ -205,6 +206,13 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+  text-decoration:none;
+  transition:.25s;
+}
+
+.socials a:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 /* ===== FOOTER ===== */
@@ -223,14 +231,13 @@ footer{
 .footer-img{
   height:160px;
   border-radius:14px;
-  background:url("https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800");
-  background-size:cover;
+  background:url("https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800") center/cover;
   box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
 .footer-bottom{
   margin-top:40px;
-  border-top:1px solid rgba(255,255,255,.15);
+  border-top:1px solid rgba(255,255,255,.25);
   padding-top:15px;
   display:flex;
   justify-content:space-between;
@@ -241,6 +248,7 @@ footer{
 @media(max-width:900px){
   .stats{
     position:static;
+    transform:none;
     margin-top:40px;
   }
   .footer-grid{
@@ -256,7 +264,9 @@ footer{
     <div class="server-icon"></div>
     <h1>Chào Mừng Đến Với<br>Máy Chủ Discord<br>Của Chúng Tôi</h1>
     <p>Nơi kết nối cộng đồng, chia sẻ đam mê và tạo nên những kỷ niệm đáng nhớ</p>
-    <button><i class="fab fa-discord"></i> Tham Gia Server</button>
+    <a class="join-btn" href="https://discord.gg/YOUR_INVITE" target="_blank">
+      <i class="fab fa-discord"></i> Tham Gia Server
+    </a>
   </div>
 
   <div class="stats">
@@ -264,7 +274,7 @@ footer{
       <li><i class="fa-solid fa-users"></i> 70+ thành viên</li>
       <li><i class="fa-solid fa-signal"></i> 20+ online/ngày</li>
       <li><i class="fa-solid fa-comments"></i> 25+ kênh chat</li>
-      <li><i class="fa-solid fa-calendar"></i> tạo ngày</li>
+      <li><i class="fa-solid fa-calendar"></i> Thành lập 2024</li>
     </ul>
   </div>
 </section>
@@ -296,19 +306,21 @@ footer{
     <div class="metric"><h3>70+</h3><span>Thành viên</span></div>
     <div class="metric"><h3>25+</h3><span>Kênh</span></div>
     <div class="metric"><h3>24/7</h3><span>Hoạt động</span></div>
-    <div class="metric"><h3>100+</h3><span>art</span></div>
+    <div class="metric"><h3>100+</h3><span>Artwork</span></div>
   </div>
 </section>
 
 <section class="cta">
   <h2>Bạn đã sẵn sàng <em>tham gia ngay</em>?</h2>
-  <button>Tham Gia Discord →</button>
+  <a class="cta-btn" href="https://discord.gg/YOUR_INVITE" target="_blank">
+    Tham Gia Discord →
+  </a>
 
   <div class="socials">
-    <i class="fab fa-facebook-f"></i>
-    <i class="fab fa-discord"></i>
-    <i class="fab fa-x-twitter"></i>
-    <i class="fab fa-instagram"></i>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://discord.gg/YOUR_INVITE" target="_blank"><i class="fab fa-discord"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
 </section>
 
@@ -316,14 +328,14 @@ footer{
   <div class="footer-grid">
     <div>
       <h3>Discord Server</h3>
-      <p>Cộng đồng sôi động với hơn 2,500 thành viên.</p>
+      <p>Cộng đồng sôi động, thân thiện và đầy năng lượng.</p>
     </div>
 
     <div>
       <h3>Liên Kết</h3>
-      <a href="#">Trang chủ</a>
-      <a href="#">Quy tắc</a>
-      <a href="#">Sự kiện</a>
+      <p>Trang chủ</p>
+      <p>Quy tắc</p>
+      <p>Sự kiện</p>
     </div>
 
     <div>
